@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:maxLevel="0">
+        <shape
+            android:shape="oval"
+            android:useLevel="false">
+            <solid android:color="@color/color_FFE1E1E1" />
+            <size
+                android:width="6dp"
+                android:height="6dp" />
+        </shape>
+    </item>
+    <item android:maxLevel="1">
+        <shape
+            android:shape="oval"
+            android:useLevel="false">
+            <solid android:color="@color/color_FF5078FA" />
+            <size
+                android:width="6dp"
+                android:height="6dp" />
+        </shape>
+    </item>
+</level-list>
