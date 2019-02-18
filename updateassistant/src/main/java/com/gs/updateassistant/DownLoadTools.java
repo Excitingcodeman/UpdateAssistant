@@ -110,6 +110,7 @@ public class DownLoadTools {
                         }
 
                     }
+
                     @Override
                     public void sure(Dialog dialog) {
                         //下载更新
@@ -142,10 +143,10 @@ public class DownLoadTools {
      * 下载文件
      */
     public void downLoad() {
-        createFile();
         new Thread(new Runnable() {
             @Override
             public void run() {
+                createFile();
                 InputStream in = null;
                 FileOutputStream out = null;
                 try {
