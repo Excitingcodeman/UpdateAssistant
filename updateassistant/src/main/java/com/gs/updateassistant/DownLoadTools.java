@@ -97,11 +97,11 @@ public class DownLoadTools {
      * 弹出默认的对话框
      */
     public void showDialog() {
-        CommonWithCloseDialog.Builder dialogBuilder = new CommonWithCloseDialog.Builder(builder.activity)
-                .setTitle(this.builder.titleMsg)
-                .setContent(this.builder.descMsg)
-                .setSureString(builder.activity.getString(R.string.sure))
-                .setIvPath(this.builder.updateImageUrl)
+        CommonWithCloseDialog.Builder dialogBuilder = new CommonWithCloseDialog.Builder(activity)
+                .setTitle(builder.titleMsg)
+                .setContent(builder.descMsg)
+                .setSureString(activity.getString(R.string.sure))
+                .setIvPath(builder.updateImageUrl)
                 .setmOnClick(new DoubleClick() {
                     @Override
                     public void cancel(Dialog dialog) {
@@ -120,7 +120,7 @@ public class DownLoadTools {
                         downLoad();
                     }
                 });
-        if (this.builder.forceUpdate) {
+        if (builder.forceUpdate) {
             //强制更新
             dialogBuilder.setShowClose(false);
         } else {
@@ -134,7 +134,7 @@ public class DownLoadTools {
                 return keyCode == KeyEvent.KEYCODE_BACK;
             }
         });
-        if (builder.activity != null && !builder.activity.isFinishing()) {
+        if (activity != null && !activity.isFinishing()) {
             dialog.show();
         }
     }
@@ -211,7 +211,7 @@ public class DownLoadTools {
 
                 }
             }
-        });
+        }).start();
     }
 
 
